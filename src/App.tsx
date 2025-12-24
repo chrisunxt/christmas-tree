@@ -138,7 +138,7 @@ const Foliage = ({ state }: { state: 'CHAOS' | 'FORMED' }) => {
 
 // --- Component: Photo Ornaments (now Text Ornaments) ---
 const PhotoOrnaments = ({ state }: { state: 'CHAOS' | 'FORMED' }) => {
-  const LABELS = ['220', 'JYJ', 'LOVE'];
+  const LABELS = ['220', 'JYJ', 'LOVE', 'SXT', 'Cedar', 'Tulip', '贝狗', '珠宝', '发财', '核桃', '薯格', '枫间', '小满', '宝玉', '花卷', '妞妞', '元宵', '莲莲', '金子','花生'];
   const count = CONFIG.counts.ornaments;
   const groupRef = useRef<THREE.Group>(null);
 
@@ -642,15 +642,7 @@ export default function GrandTreeApp() {
       </div>
       <GestureController onGesture={setSceneState} onMove={setRotationSpeed} onStatus={setAiStatus} debugMode={debugMode} />
 
-      {/* UI - Stats */}
-      <div style={{ position: 'absolute', bottom: '30px', left: '40px', color: '#888', zIndex: 10, fontFamily: 'sans-serif', userSelect: 'none' }}>
-        <div>
-          <p style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '4px' }}>Foliage</p>
-          <p style={{ fontSize: '24px', color: '#004225', fontWeight: 'bold', margin: 0 }}>
-            {(CONFIG.counts.foliage / 1000).toFixed(0)}K <span style={{ fontSize: '10px', color: '#555', fontWeight: 'normal' }}>EMERALD NEEDLES</span>
-          </p>
-        </div>
-      </div>
+      {/* UI - Stats (removed Foliage label as requested) */}
 
       {/* UI - Buttons */}
       <div style={{ position: 'absolute', bottom: '30px', right: '40px', zIndex: 10, display: 'flex', gap: '8px' }}>
